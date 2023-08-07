@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+  <script>
+    const url = new URL(location.href);
+    const code = url.searchParams.get('code');
+
+    if (code) {
+      const input = document.querySelector('input');
+      input.value = code;
+
+      console.log(url);
+
+      input.select();
+    }
+  </script>
+</body>
+
+</html>
